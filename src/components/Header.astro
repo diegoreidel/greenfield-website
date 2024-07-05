@@ -1,0 +1,17 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../images/logo.png';
+---
+
+<div class="w-full h-16 bg-green pt-1 flex items-center justify-center">
+   <div class="w-9/12 flex justify-center md:justify-start">
+        <Image src={logo} alt="The Grenfield Commerce Consulting logo, a large tree with the company name written to the right." class='logo' />
+   </div>
+</div>
+
+<style>
+    .logo {
+        width: 183px;
+        height: 50px;
+    }
+</style>

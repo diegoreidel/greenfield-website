@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets';
+import linkedin from '../images/linkedin.png';
+const { name, role, profileImage, email, linkedinURL  } = Astro.props;
+
+---
+
+<div class="h-72 bg-green grid grid-cols-2 gap-2 h-full team-member">
+    <div><Image src={profileImage} alt='Picture from one of our consultants' class='consultant'/></div>
+    <div class="pt-8 text-white h-full"> 
+        <div class="h-3/6">
+            <h1 class="text-2xl text-white">{name}</h1>
+            <p class="pt-4 text-xl text-white font-thin">{role}</p>
+        </div>
+        <div class="h-3/6 pb-4 text-white place-content-end	"> 
+            <p class="font-thin text-l text-white">{email}</p>
+            <div class="pt-2 flex">
+                <div class="px-1"><a href={linkedinURL}><Image src={linkedin} alt='' /></a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .consultant 
+    {
+        width: 100%;
+        height: 100%;
+    }
+
+    .team-member {
+        min-width: 516px;
+        max-width: 625px;
+    }
+</style>

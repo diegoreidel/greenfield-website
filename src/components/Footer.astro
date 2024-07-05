@@ -1,0 +1,47 @@
+---
+import { Image } from 'astro:assets';
+import greenfield from '../images/greenfield.png';
+import linkedin from '../images/linkedin.png';
+---
+
+<div class="flex justify-center">
+    <div class="flex py-4 border-t-2 border-green w-10/12 mt-12 gap-10 place-content-around	 md:place-content-around footer">
+        <div class="hidden md:block greenfield justify-self-start">
+            <Image class= "greenfield" src={greenfield} alt='Greenfield logo' />
+        </div>
+
+        <div class="text-sm justify-self-end text-green">
+            <p>Rua Pinheiro Machado, 544</p>
+            <p>Centro - São Leopoldo</p>
+            <p>RS, Brasil</p>
+        </div>
+        <div class="text-sm justify-self-end text-green">
+            <p>contact@greenfieldcommerce.com</p>
+            <div class="mt-4">
+                <a href="https://www.linkedin.com/company/greenfieldcommerce"><Image src={linkedin} alt='Linkedin icon' /></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .greenfield {
+        height: 60px;
+        width: auto;
+        min-width: 216px;
+    }
+
+    @media (min-width: 1124px) {
+        .footer {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            width: 91.666667%;
+        } 
+    }
+
+    @media (min-width: 900px) {
+        .footer {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            width: 91.666667%;
+        } 
+    }
+</style>
